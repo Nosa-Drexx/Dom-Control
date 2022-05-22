@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handburger menu practice</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/4ca2d1c5bb.js" crossorigin="anonymous" defer></script>
+</head>
+<body id ="body">
+    <nav>
+        <ul>
+            <li aria-hidden="true"> 
+                <div class = 'modal'> </div>      
+                <div class = "side-bar">
+                <button class = "back-arrow"><span class="fa-solid fa-angles-left "></span></button>
+                </div>
+                <button class="menu"><a  href = "#"><span class="fa-solid fa-bars"></button>
+                 </span>
+                </a>
+            </li>
+            <li><a href = "#">Home</a></li>
+            <li><a href = "#">Join</a></li>
+            <li><a href = "#">About</a></li>
+            <li><a href = "#">Github</a></li>
+        </ul>
+    </nav>
+    <section class="additional">
+        <form id = "form">
+        <input class="search" id = "search1" placeholder="Search for box..." size = '1' type="text"/><button class="firstsearch"><img src = "./images/search.png"/></button>
+    </section>
+
+    <section class ="Items">
+        <div class = 'add'>
+            <h2>First Element</h2>
+            <button class="remove">X</button>
+        </div>   
+        <div class = 'add'>
+            <h2>Second Element</h2>
+            <button class="remove">X</button>
+        </div> 
+    </section>
+
+    <section>
+        <input class = "check" name = "checkbox" type="checkbox"/><p id="text">Check Box To Hide All Items, And Uncheck To View Them.</p>
+        <form>
+            <input class="search" id="value" placeholder="Add Items..." type="search"/>
+        </form>
+        <button class="submit">Add Items</button>
+    </section>
+    <script src = './design.js'></script>
+</body>
+</html>

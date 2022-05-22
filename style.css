@@ -1,0 +1,213 @@
+:root{
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    border: 1px solid blue;
+    background-color: aqua;
+}
+nav ul {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    flex-flow: row wrap;
+}
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+li a{
+    display: inline-block;
+    padding: 1rem 3rem;
+    color: maroon;
+    font-size: 2rem;
+    font-family:var(--font);
+    text-decoration: none;
+}
+.menu{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    color: maroon;
+    font-size: 2rem;
+    font-family:var(--font);
+}
+ul li, a:hover{
+    color: red;
+}
+div.side-bar{
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 1px 0px 3px rgba(0,0,0,0.6);
+    width: 80%;
+    z-index: 999;
+    background-color: rgb(245, 244, 244);
+    transform: translateX(-100%); /*to be changed with javascript*/
+    transition: transform 1s;
+} 
+div.modal {
+    display: none;
+    z-index: 99;
+    position: absolute;
+    flex-flow: row wrap;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    will-change: transition;
+}
+
+div.side-bar .back-arrow {
+    font-size: 2rem;
+    flex-basis: 10%;
+    margin-left: auto;
+    height: 10%;
+    justify-items: flex-end;
+    padding: 1rem;
+    text-align: right;
+    background-color: transparent;
+    border: 0;
+}
+.back-arrow:hover {
+    cursor: pointer;
+    color: maroon;
+}
+section{
+    max-width: 1200px;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.additional {
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+form {
+    flex-basis: 100%;
+    display: flex;  
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; 
+}
+.search {
+    width: 70%;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(34, 165, 150, 0.6);
+    text-align: center;
+} 
+#search1 {
+    width: 0%;
+    opacity: 0;
+    transition: opacity 2s, width 2s;
+}
+.firstsearch{
+    background-color: blue;
+    border: none;
+    flex-basis: 3%;
+    padding: 0.5rem;
+    height: 100%; 
+    border-radius: 50%;
+    opacity: 1;
+    position: relative;
+    transition: opacity 1s;
+}
+.firstsearch:hover{
+    background-color: rgb(1, 1, 191);
+    cursor: pointer;
+}
+.firstsearch img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+.search:hover {
+    border-color: rgba(4, 112, 100, 0.6);
+}
+.submit {
+    font-family: var(--font);
+    font-size: 2rem;
+    background-color:rgb(231, 139, 10);
+    color: cyan;
+    border: none;
+    border-radius: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.6);
+    margin-top: 1rem;
+}
+.submit:hover {
+    background-color:rgb(211, 127, 8);
+    cursor: pointer;
+}
+.submit:active {
+    background-color:rgb(188, 112, 7);
+    box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.6);
+}
+section .add {
+    /* flex-basis: 100%; */
+    width: 98%;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    margin: 1rem auto;
+    display:flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;   
+}
+.Items .search {
+    width: 70%;
+}
+.add h2 {
+    display: inline-block;
+    width: 86%;
+    font-family:var(--font);
+}
+.add button {
+    background-color:rgba(34, 165, 150, 0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+.add p {
+    font-family: var(--font);
+}
+.add button:hover {
+    background-color:rgba(10, 121, 108, 0.6);
+    cursor: pointer;
+}
+@media(min-width: 500px) {
+
+}
+@media(min-width: 800px) {
+    div.side-bar {
+        width: 40%;
+    }
+    .add h2 {
+        width: 92%;
+    }
+}
