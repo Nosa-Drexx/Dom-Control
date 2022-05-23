@@ -86,22 +86,39 @@ item.querySelectorAll('.add').forEach((node)=>{
     arr.push(node); // pushes every element to the new array
 })
 
-searchbox.addEventListener('keypress',(event)=>{
+searchbox.addEventListener('keyup',(event)=>{ // search through on keyup for continous automatic search
+    autoSearch();
     if(event.keyCode === 13) {
-        var compare = searchbox.value;
-
-        item.querySelectorAll('.add').forEach((node)=>{
-            node.style.display = 'none';
-        });
-
-        arr.forEach((elem)=>{
-        var holder = elem.querySelector('h2').innerHTML;
-
-        if(compare === holder) {
-            elem.style.display = 'flex';
-        }
-        })
+        autoSearch();
         searchbox.value = ''
     }
 });
+
+searchbox.addEventListener('focusout',(event)=>{ // end search when user leaves the search box
+
+    item.querySelectorAll('.add').forEach((node)=>{
+        node.style.display = 'flex';
+    });
+
+});
+
+searchbox.addEventListener('focus',(event)=>{ // auto start when focus on the seachbox
+    autoSearch();
+});
  
+function autoSearch(){
+    var compare = searchbox.value.toUpperCase();
+    console.log(compare);
+
+    item.querySelectorAll('.add').forEach((node)=>{
+        node.style.display = 'none';
+    });
+
+    arr.forEach((elem)=>{
+    var holder = elem.querySelector('h2').innerHTML.toUpperCase();
+
+    if(compare === holder) {
+        elem.style.display = 'flex';
+    }
+    });
+}
