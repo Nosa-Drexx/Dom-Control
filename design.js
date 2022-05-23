@@ -27,6 +27,9 @@ addMore.addEventListener('click',()=>{ // adds more boxes to the Dom.
     const nameOfNode = document.createElement('h2');
     var name = document.querySelector('#value').value;
     nameOfNode.innerText = name;
+        if(name == ''){
+        name = ' ';
+    }
 
     const button = document.createElement('button');
     button.setAttribute('class','remove');
