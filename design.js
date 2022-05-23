@@ -117,7 +117,7 @@ function autoSearch(){
     arr.forEach((elem)=>{
     var holder = elem.querySelector('h2').innerHTML.toUpperCase();
 
-    if(compare === holder) {
+    if(holder.includes(compare)) {
         elem.style.display = 'flex';
     }
     });
